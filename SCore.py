@@ -1,4 +1,6 @@
+#Class with basic kernel functions
 class SoTACore():
+
     #Read json file. Returns a list
     #EXAMPLE: print(_json_read(file)["Variable"])
     def _json_read(file:str) -> str:
@@ -8,7 +10,7 @@ class SoTACore():
         
     #Write Log in file, Returns None
     #EXAMPLE: _log("Hello", log)
-    def _logs(log:str, file:str) -> None:
+    def _logs(log:str, file = "log") -> None:
         with open(f"{file}.txt", "a") as f:
             f.write(f"{log}")
 
@@ -21,4 +23,12 @@ class SoTACore():
         nowtime = dt.time()
         nowdate = dt.date()
         return([f"{nowtime.hour}:{nowtime.minute}:{nowtime.second}",f"{nowdate.day}.{nowdate.month}.{nowdate.year}"])
+    
+    #Class for managing a minecraft server via discord
+    class Minecraft():
+        #returns None
+        #Starts the Minecraft server. Accepts the startup file directory
+        def _start(file:str) -> None:
+            import os
+            os.system(f"start {file}")
         
