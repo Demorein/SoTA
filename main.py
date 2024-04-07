@@ -19,7 +19,7 @@ async def on_ready():
 async def StartMS(ctx):
     embed = discord.Embed(
         title="Запуск сервера Minecraft!",
-                                                    #FIXME Не пингуется пользователь 
+                                                    #FIXME Не пингуется пользователь
         description=f"Запустил: @{ctx.author}\nВремя:{SoTACore._time()[0]}\nДата:{SoTACore._time()[1]}",
         color=0x008000,
     )
@@ -32,10 +32,11 @@ async def StartMS(ctx):
 async def info(ctx):
     embed = discord.Embed(
         title="SoTA",
-        description="Проект, созданный для управления игровыми серверами через дискорд бота",
+        description="Name:SoTA\nDescription:Проект, созданный для управления игровыми серверами через дискорд бота\nCore:SoTA Core\nCreator:Demorien\nGitHub:https://github.com/Demorein/SoTA\nVersion: 1.7-a",
         color= 0xda4400
     )
     embed.set_image(url=data["urlSoTA"])
+    #SoTACore._logs(f"@{ctx.autor} использовал команду !info|| Время:{SoTACore._time()[0]}Дата:{SoTACore._time()[1]} {SERV_PREFIX}\n")
     await ctx.send(embed=embed)
     
 

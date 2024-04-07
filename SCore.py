@@ -27,7 +27,7 @@ class SoTACore():
     #Class for managing a minecraft server via discord
     class Minecraft():
         #returns None
-        #Starts the Minecraft server. Accepts the startup file directory
+        #Starts .bat the Minecraft server. Accepts the startup file directory
         def _start(file:str) -> None:
             import os
             os.system(f"start {file}")
