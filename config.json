@@ -1,7 +1,11 @@
 {
     "token": "",
     "prefix": "!",
-    "urlmine": "https://static.wikia.nocookie.net/minecraft_gamepedia/images/c/c7/Grass_Block.png/revision/latest?cb=20230226144250",
     "minedir": "server.bat",
-    "urlSoTA": "https://i.pinimg.com/736x/2c/30/c6/2c30c6f468e6b77c3b4e15e89fceefd8.jpg"
+    "xlsx": "ServerList.xlsx",
+    "urlhelp": "https://cs5.pikabu.ru/post_img/big/2015/01/27/5/1422344052_1923586472.jpg",
+    "urlmine": "https://static.wikia.nocookie.net/minecraft_gamepedia/images/c/c7/Grass_Block.png/revision/latest?cb=20230226144250",
+    "urlSoTA": "https://i.pinimg.com/736x/2c/30/c6/2c30c6f468e6b77c3b4e15e89fceefd8.jpg",
+    "urlae": "https://cdn131.picsart.com/330059353074211.png",
+    "urlnotfound": "https://avatars.mds.yandex.net/i?id=078dc56172f7ee2d4e221822797fcba295d094af-4937453-images-thumbs&n=13"
 }

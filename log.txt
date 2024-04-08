@@ -1,40 +1,39 @@
 
-
-SoTA#8721 Ready to work, time: 13:52:17, date: time: 7.4.2024 ------------
-
-@demorien запустил сервер Майнкрафт || Время:13:52:27Дата:7.4.2024 ************
-
-SoTA#8721 Ready to work, time: 14:9:56, date: time: 7.4.2024 ------------
-SoTA#8721 Ready to work, time: 14:10:34, date: time: 7.4.2024 ------------
-SoTA#8721 Ready to work, time: 14:10:57, date: time: 7.4.2024 ------------
-SoTA#8721 Ready to work, time: 14:12:33, date: time: 7.4.2024 ------------
-SoTA#8721 Ready to work, time: 14:23:36, date: time: 7.4.2024 ------------
-SoTA#8721 Ready to work, time: 14:32:44, date: time: 7.4.2024 ------------
-SoTA#8721 Ready to work, time: 14:48:47, date: time: 7.4.2024 ------------
-SoTA#8721 Ready to work, time: 14:55:54, date: time: 7.4.2024 ------------
-SoTA#8721 Ready to work, time: 14:59:21, date: time: 7.4.2024 ------------
-SoTA#8721 Ready to work, time: 15:3:9, date: time: 7.4.2024 ------------
-
-@demorien запустил сервер Майнкрафт || Время:15:3:36Дата:7.4.2024 ************
-
-SoTA#8721 Ready to work, time: 15:5:54, date: time: 7.4.2024 ------------
-
-@demorien запустил сервер Майнкрафт || Время:15:6:46Дата:7.4.2024 ************
-
-SoTA#8721 Ready to work, time: 15:10:27, date: time: 7.4.2024 ------------
-
-@demorien запустил сервер Майнкрафт || Время:15:10:37Дата:7.4.2024 ************
-
-SoTA#8721 Ready to work, time: 15:12:7, date: time: 7.4.2024 ------------
-
-@demorien запустил сервер Майнкрафт || Время:15:12:13Дата:7.4.2024 ************
-
-SoTA#8721 Ready to work, time: 15:14:9, date: time: 7.4.2024 ------------
-
-@demorien запустил сервер Майнкрафт || Время:15:14:19Дата:7.4.2024 ************
-
-SoTA#8721 Ready to work, time: 15:17:28, date: time: 7.4.2024 ------------
-SoTA#8721 Ready to work, time: 15:20:38, date: time: 7.4.2024 ------------
-SoTA#8721 Ready to work, time: 15:21:44, date: time: 7.4.2024 ------------
-
-@demorien запустил сервер Майнкрафт || Время:15:21:57Дата:7.4.2024 ************
+SoTA#8721 Ready to work, time: 23:27:52, date: time: 7.4.2024 ------------
+SoTA#8721 Ready to work, time: 23:28:48, date: time: 7.4.2024 ------------
+SoTA#8721 Ready to work, time: 23:41:15, date: time: 7.4.2024 ------------
+SoTA#8721 Ready to work, time: 23:44:2, date: time: 7.4.2024 ------------
+SoTA#8721 Ready to work, time: 0:2:55, date: time: 8.4.2024 ------------
+SoTA#8721 Ready to work, time: 1:53:24, date: time: 8.4.2024 ------------
+SoTA#8721 Ready to work, time: 1:57:14, date: time: 8.4.2024 ------------
+SoTA#8721 Ready to work, time: 2:2:37, date: time: 8.4.2024 ------------
+SoTA#8721 Ready to work, time: 2:49:37, date: time: 8.4.2024 ------------
+SoTA#8721 Ready to work, time: 2:54:1, date: time: 8.4.2024 ------------
+SoTA#8721 Ready to work, time: 2:56:11, date: time: 8.4.2024 ------------
+SoTA#8721 Ready to work, time: 2:57:57, date: time: 8.4.2024 ------------
+SoTA#8721 Ready to work, time: 3:1:4, date: time: 8.4.2024 ------------
+SoTA#8721 Ready to work, time: 3:5:30, date: time: 8.4.2024 ------------
+SoTA#8721 Ready to work, time: 3:7:3, date: time: 8.4.2024 ------------
+SoTA#8721 Ready to work, time: 3:11:52, date: time: 8.4.2024 ------------
+SoTA#8721 Ready to work, time: 3:17:53, date: time: 8.4.2024 ------------
+SoTA#8721 Ready to work, time: 3:46:17, date: time: 8.4.2024 ------------
+SoTA#8721 Ready to work, time: 3:53:30, date: time: 8.4.2024 ------------
+SoTA#8721 Ready to work, time: 4:16:40, date: time: 8.4.2024 ------------
+SoTA#8721 Ready to work, time: 4:25:39, date: time: 8.4.2024 ------------
+SoTA#8721 Ready to work, time: 4:41:3, date: time: 8.4.2024 ------------
+SoTA#8721 Ready to work, time: 4:45:42, date: time: 8.4.2024 ------------
+SoTA#8721 Ready to work, time: 4:49:5, date: time: 8.4.2024 ------------
+SoTA#8721 Ready to work, time: 4:49:41, date: time: 8.4.2024 ------------
+SoTA#8721 Ready to work, time: 4:51:17, date: time: 8.4.2024 ------------
+SoTA#8721 Ready to work, time: 4:53:32, date: time: 8.4.2024 ------------
+SoTA#8721 Ready to work, time: 4:57:0, date: time: 8.4.2024 ------------
+SoTA#8721 Ready to work, time: 4:59:0, date: time: 8.4.2024 ------------
+SoTA#8721 Ready to work, time: 5:0:3, date: time: 8.4.2024 ------------
+SoTA#8721 Ready to work, time: 6:9:35, date: time: 8.4.2024 ------------
+SoTA#8721 Ready to work, time: 6:24:10, date: time: 8.4.2024 ------------
+SoTA#8721 Ready to work, time: 6:25:9, date: time: 8.4.2024 ------------
+SoTA#8721 Ready to work, time: 6:27:10, date: time: 8.4.2024 ------------
+SoTA#8721 Ready to work, time: 6:30:43, date: time: 8.4.2024 ------------
+SoTA#8721 Ready to work, time: 6:33:8, date: time: 8.4.2024 ------------
+SoTA#8721 Ready to work, time: 6:37:19, date: time: 8.4.2024 ------------
+SoTA#8721 Ready to work, time: 6:39:10, date: time: 8.4.2024 ------------

@@ -1,43 +1,95 @@
-import discord
-from discord.ext import commands
+import disnake
+from disnake.ext import commands
 from SCore import *
+from dis import disco
 import os
+import tracemalloc
 
+tracemalloc.start()
+
+#PREFIXS
 SYS_PREFIX = "------------"
 SERV_PREFIX = "************"
 
+#Objects
+command_sync_flags = commands.CommandSyncFlags.default()
+command_sync_flags.sync_commands_debug = True
 data = SoTACore._json_read("config.json")
-bot = commands.Bot(command_prefix=data["prefix"],intents=discord.Intents.all())
+bot = commands.Bot(command_prefix=data["prefix"],intents=disnake.Intents.all(), test_guilds=[1226160999250526238], help_command=None)
 
+
+#EVENT on_ready
 @bot.event
 async def on_ready():
     os.system("cls")
     print("Ready")
     SoTACore._logs(f"\n{bot.user} Ready to work, time: {SoTACore._time()[0]}, date: time: {SoTACore._time()[1]} {SYS_PREFIX}")
+    
 
-@bot.command()
-async def StartMS(ctx):
-    embed = discord.Embed(
-        title="Запуск сервера Minecraft!",
-                                                    #FIXME Не пингуется пользователь
-        description=f"Запустил: @{ctx.author}\nВремя:{SoTACore._time()[0]}\nДата:{SoTACore._time()[1]}",
-        color=0x008000,
+@bot.slash_command()
+async def help(ctx):
+    embed = disnake.Embed(
+        title="Help Command",
+        description="/help - Выводит это сообщение\n/startserver [servername] - Запускает сервер\n/info - Информация о боте"
     )
-    embed.set_image(url=data["urlmine"])
-    SoTACore._logs(log = f"\n\n@{ctx.author} запустил сервер Майнкрафт || Время:{SoTACore._time()[0]}Дата:{SoTACore._time()[1]} {SERV_PREFIX}\n")
-    SoTACore.Minecraft._start(data["minedir"])
-    await ctx.send(embed= embed)
+    embed.set_thumbnail(url=data["urlhelp"])
+    await ctx.send(embed=embed)
 
-@bot.command()
+
+@bot.slash_command()
+async def startserver(ctx, server:str):
+    if SoTACore.Minecraft._start(server) == True:
+        embed = disnake.Embed(
+            title="Запуск сервера!",
+            description=f"Запустил: @{ctx.author}\nВремя: {SoTACore._time()[0]}\nДата: {SoTACore._time()[1]}",
+            color=0x2ec700
+        )
+        embed.set_thumbnail(url=data["urlmine"])
+        SoTACore._logs(f"Запустил: @{ctx.author} Время: {SoTACore._time()[0]} Дата: {SoTACore._time()[1]}")
+        await ctx.send(embed=embed)
+    else:
+        embed = disnake.Embed(
+            title="ERROR 404",
+            description="ServerName is NotFound",
+            color=0xed0000
+        )
+        embed.set_thumbnail(url=data["urlnotfound"])
+        SoTACore._logs(f"Команда от: {ctx.author} NOT FOUND 404 Время: {SoTACore._time()[0]} Дата: {SoTACore._time()[1]}")
+        await ctx.send(embed=embed)
+
+@bot.slash_command()
 async def info(ctx):
-    embed = discord.Embed(
-        title="SoTA",
-        description="Name:SoTA\nDescription:Проект, созданный для управления игровыми серверами через дискорд бота\nCore:SoTA Core\nCreator:Demorien\nGitHub:https://github.com/Demorein/SoTA\nVersion: 1.7-a",
+    embed = disnake.Embed(
+        title="**SoTA**",
+        description="Name:SoTA\nDescription:Проект, созданный для управления игровыми серверами через дискорд бота\nCore:SoTA Core\nCreator:Demorien\nVersion: 1.7-a",
         color= 0xda4400
     )
-    embed.set_image(url=data["urlSoTA"])
-    #SoTACore._logs(f"@{ctx.autor} использовал команду !info|| Время:{SoTACore._time()[0]}Дата:{SoTACore._time()[1]} {SERV_PREFIX}\n")
+    
+    embed.add_field(name="GitHub", value="https://github.com/Demorein/SoTA")
+    embed.set_thumbnail(url=data["urlSoTA"])
     await ctx.send(embed=embed)
+
+    
+
+
+
+
+
+#Create object a embed
+    
+
+
+    #embed = disnake.Embed(
+    #    title="SoTA",
+    #    description="Name:SoTA\nDescription:Проект, созданный для управления игровыми серверами через дискорд бота\nCore:SoTA Core\nCreator:Demorien\nVersion: 1.7-a",
+    #    color= 0xda4400
+    #)
+    #
+    #embed.add_field(name="GitHub", value="https://github.com/Demorein/SoTA")
+    #embed.set_thumbnail(url=data["urlSoTA"])
+
+
+
     
 
 bot.run(data["token"])

@@ -24,11 +24,34 @@ class SoTACore():
         nowdate = dt.date()
         return([f"{nowtime.hour}:{nowtime.minute}:{nowtime.second}",f"{nowdate.day}.{nowdate.month}.{nowdate.year}"])
     
+    def _check(object:int, xlsx:str) -> bool:
+        row = 1
+        import openpyxl
+        wb = openpyxl.load_workbook(xlsx)
+        ws = wb.active
+        while True:
+            row += 1
+            if ws[f"A{row}"].value == None:
+                wb.close()
+                return(False)
+            elif id == int(ws[f"A{row}"].value):
+                wb.close()
+                return(True)
+            else:
+                pass
+    
     #Class for managing a minecraft server via discord
     class Minecraft():
         #returns None
         #Starts .bat the Minecraft server. Accepts the startup file directory
-        def _start(file:str) -> None:
+        def _start(platform:str) -> bool:
             import os
-            os.system(f"start {file}")
+            if os.path.exists(f"{platform}.bat") == True:
+                os.system(f"start {platform}.bat")
+                return(True)
+            else:
+                return(False)
+            
+
+
         
