@@ -40,18 +40,23 @@ class SoTACore():
             else:
                 pass
     
-    #Class for managing a minecraft server via discord
-    class Minecraft():
-        #returns None
+    #Class for managing server via discord
+    class Server():
+        #returns bool
         #Starts .bat the Minecraft server. Accepts the startup file directory
         def _start(platform:str) -> bool:
-            import os
-            if os.path.exists(f"{platform}.bat") == True:
-                os.system(f"start {platform}.bat")
+            from os import path, system
+            if path.exists(f"{platform}.exe") == True:
+                system(f"start {platform}.exe")
                 return(True)
             else:
                 return(False)
             
-
-
-        
+        def _close(platform:str) -> bool:
+            from os import path
+            from subprocess import Popen
+            if path.exists(f"{platform}.exe") == True:
+                Popen(f'taskkill /im {platform}SoTA /f')
+                return(True)
+            else:
+                return(False)

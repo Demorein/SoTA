@@ -15,7 +15,7 @@ SERV_PREFIX = "************"
 command_sync_flags = commands.CommandSyncFlags.default()
 command_sync_flags.sync_commands_debug = True
 data = SoTACore._json_read("config.json")
-bot = commands.Bot(command_prefix=data["prefix"],intents=disnake.Intents.all(), test_guilds=[1226160999250526238], help_command=None)
+bot = commands.Bot(command_prefix=data["prefix"],intents=disnake.Intents.all(), test_guilds=[1226160999250526238])
 
 
 #EVENT on_ready
@@ -27,18 +27,19 @@ async def on_ready():
     
 
 @bot.slash_command()
-async def help(ctx):
+async def helps(ctx):
     embed = disnake.Embed(
         title="Help Command",
         description="/help - Выводит это сообщение\n/startserver [servername] - Запускает сервер\n/info - Информация о боте"
     )
     embed.set_thumbnail(url=data["urlhelp"])
-    await ctx.send(embed=embed)
+    channel = bot.get_channel(1226160999250526241)
+    await channel.send(embed=embed)
 
 
 @bot.slash_command()
 async def startserver(ctx, server:str):
-    if SoTACore.Minecraft._start(server) == True:
+    if SoTACore.Server._start(server) == True:
         embed = disnake.Embed(
             title="Запуск сервера!",
             description=f"Запустил: @{ctx.author}\nВремя: {SoTACore._time()[0]}\nДата: {SoTACore._time()[1]}",
@@ -57,6 +58,29 @@ async def startserver(ctx, server:str):
         SoTACore._logs(f"Команда от: {ctx.author} NOT FOUND 404 Время: {SoTACore._time()[0]} Дата: {SoTACore._time()[1]}")
         await ctx.send(embed=embed)
 
+
+# @bot.slash_command()
+# async def stopserver(ctx, server:str):
+#     if SoTACore.Server._close(server) == True:
+#         embed = disnake.Embed(
+#             title="Остановка сервера",
+#             description=f"Остановил: @{ctx.author}\nВремя: {SoTACore._time()[0]}\nДата: {SoTACore._time()[1]}",
+#             color=0xff9300
+#         )
+#         embed.set_thumbnail(url=data["urlmine"])
+#         SoTACore._logs(f"Запустил: @{ctx.author} Время: {SoTACore._time()[0]} Дата: {SoTACore._time()[1]}")
+#         await ctx.send(embed=embed)
+#     else:
+#         embed = disnake.Embed(
+#             title="ERROR 404",
+#             description="ServerName is NotFound",
+#             color=0xed0000
+#         )
+#         embed.set_thumbnail(url=data["urlnotfound"])
+#         SoTACore._logs(f"Команда от: {ctx.author} NOT FOUND 404 Время: {SoTACore._time()[0]} Дата: {SoTACore._time()[1]}")
+#         await ctx.send(embed=embed)
+
+
 @bot.slash_command()
 async def info(ctx):
     embed = disnake.Embed(
@@ -68,28 +92,5 @@ async def info(ctx):
     embed.add_field(name="GitHub", value="https://github.com/Demorein/SoTA")
     embed.set_thumbnail(url=data["urlSoTA"])
     await ctx.send(embed=embed)
-
-    
-
-
-
-
-
-#Create object a embed
-    
-
-
-    #embed = disnake.Embed(
-    #    title="SoTA",
-    #    description="Name:SoTA\nDescription:Проект, созданный для управления игровыми серверами через дискорд бота\nCore:SoTA Core\nCreator:Demorien\nVersion: 1.7-a",
-    #    color= 0xda4400
-    #)
-    #
-    #embed.add_field(name="GitHub", value="https://github.com/Demorein/SoTA")
-    #embed.set_thumbnail(url=data["urlSoTA"])
-
-
-
-    
 
 bot.run(data["token"])
